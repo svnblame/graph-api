@@ -1,3 +1,4 @@
+# Query: Return Posts with Pagination
 {
   posts(first: 2, page: 2) {
     data {
@@ -14,6 +15,38 @@
   }
 }
 
+# Result: Posts with Pagination
+{
+  "data": {
+    "posts": {
+      "data": [
+        {
+          "title": "Totam sint.",
+          "comments": [
+            {
+              "reply": "Et velit dolores qui sapiente. Voluptatum et ad aut. Non quaerat expedita ipsum ipsum cum."
+            }
+          ]
+        },
+        {
+          "title": "Corporis dolorem vero.",
+          "comments": [
+            {
+              "reply": "Dolorum saepe cupiditate magnam dolor praesentium officiis aperiam. Non perspiciatis aut reiciendis incidunt autem. Vitae animi eum tempore sint soluta rem."
+            }
+          ]
+        }
+      ],
+      "paginatorInfo": {
+        "count": 2,
+        "currentPage": 2,
+        "lastPage": 25
+      }
+    }
+  }
+}
+
+# Query: Return Users with Pagination
 {
   users(first: 2, page: 2) {
     data {
@@ -30,6 +63,85 @@
       count
       currentPage
       lastPage
+    }
+  }
+}
+
+# Result: Users with Pagination
+{
+  "data": {
+    "users": {
+      "data": [
+        {
+          "name": "Kelsi Schoen",
+          "email": "dmuller@example.com",
+          "posts": [
+            {
+              "title": "Totam sint.",
+              "comments": [
+                {
+                  "reply": "Et velit dolores qui sapiente. Voluptatum et ad aut. Non quaerat expedita ipsum ipsum cum."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Monroe Wisozk",
+          "email": "guillermo32@example.org",
+          "posts": [
+            {
+              "title": "Corporis dolorem vero.",
+              "comments": [
+                {
+                  "reply": "Dolorum saepe cupiditate magnam dolor praesentium officiis aperiam. Non perspiciatis aut reiciendis incidunt autem. Vitae animi eum tempore sint soluta rem."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paginatorInfo": {
+        "count": 2,
+        "currentPage": 2,
+        "lastPage": 26
+      }
+    }
+  }
+}
+
+# Query: Create User. NOTE: Insecure
+mutation {
+  createUser(name: "Donald Trump", email: "dtrump@example.com", password: "P4ssw0rd!") {
+    id
+    name
+  }
+}
+
+# Results: Create User
+{
+  "data": {
+    "createUser": {
+      "id": "52",
+      "name": "Donald Trump"
+    }
+  }
+}
+
+# Query: Update User
+mutation {
+  updateUser(id: "51", name: "Hillary", email: "hclinton@example.com") {
+    name
+    email
+  }
+}
+
+# Results: Update User
+{
+  "data": {
+    "updateUser": {
+      "name": "Hillary",
+      "email": "hclinton@example.com"
     }
   }
 }
