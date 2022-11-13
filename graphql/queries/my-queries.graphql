@@ -145,3 +145,23 @@ mutation {
     }
   }
 }
+
+# Query: Upsert User. Update a model with a given `id` or create if not exist.
+mutation {
+  upsertUser(id: "53", name: "Joe Schmoe", email: "jschmoe@example.com", password: "P4ssw0rd!") {
+    id
+    name
+    email
+  }
+}
+
+# Result: Upser User
+{
+  "data": {
+    "upsertUser": {
+      "id": "53",
+      "name": "Joe Schmoe",
+      "email": "jschmoe@example.com"
+    }
+  }
+}
