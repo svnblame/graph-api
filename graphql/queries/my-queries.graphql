@@ -165,3 +165,21 @@ mutation {
     }
   }
 }
+
+# Query: Delete User. NOTE: Dangerously easy!
+mutation {
+  deleteUser(id: "52") {
+    name
+    email
+  }
+}
+
+# Result: Delete User
+{
+  "data": {
+    "deleteUser": {
+      "name": "Donald Trump",
+      "email": "dtrump@example.com"
+    }
+  }
+}
