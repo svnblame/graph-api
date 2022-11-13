@@ -1,66 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <a href="https://www.lighthouse-php.com">
+    <img src="./logo.png" alt=lighthouse-logo" width="150" height="150">
+  </a>
+</div>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<div align="center">
 
-## About Laravel
+# Lighthouse
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Continuous Integration](https://github.com/nuwave/lighthouse/workflows/Continuous%20Integration/badge.svg)](https://github.com/nuwave/lighthouse/actions)
+[![Code Coverage](https://codecov.io/gh/nuwave/lighthouse/branch/master/graph/badge.svg)](https://codecov.io/gh/nuwave/lighthouse)
+[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![Packagist](https://img.shields.io/packagist/dt/nuwave/lighthouse.svg)](https://packagist.org/packages/nuwave/lighthouse)
+[![Latest Stable Version](https://poser.pugx.org/nuwave/lighthouse/v/stable)](https://packagist.org/packages/nuwave/lighthouse)
+[![GitHub license](https://img.shields.io/github/license/nuwave/lighthouse.svg)](https://github.com/nuwave/lighthouse/blob/master/LICENSE)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[![Ask on Stack Overflow](https://img.shields.io/badge/StackOverflow-ask-orange.svg)](https://stackoverflow.com/questions/tagged/laravel-lighthouse)
+[![Get on Slack](https://img.shields.io/badge/Slack-join-blueviolet.svg)](https://join.slack.com/t/lighthouse-php/shared_invite/zt-4sm280w1-wu21r94f3kLRRtBXRbXVfw)
 
-## Learning Laravel
+**A framework for serving GraphQL from Laravel**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+</div>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Lighthouse is a GraphQL framework that integrates with your Laravel application.
+It takes the best ideas of both and combines them to solve common tasks with ease
+and offer flexibility when you need it.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Documentation
 
-## Laravel Sponsors
+The documentation lives at [lighthouse-php.com](https://lighthouse-php.com).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+The site includes the latest docs for each major version of Lighthouse.
+You can find docs for specific versions by looking at the contents of [/docs/master](/docs/master)
+at that point in the git history: `https://github.com/nuwave/lighthouse/tree/<SPECIFIC-TAG>/docs/master`.
 
-### Premium Partners
+## Get involved
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Have a question? [Use the laravel-lighthouse tag on Stack Overflow](https://stackoverflow.com/questions/tagged/laravel-lighthouse)
+- Talk to other users? [Hop into Slack](https://join.slack.com/t/lighthouse-php/shared_invite/zt-4sm280w1-wu21r94f3kLRRtBXRbXVfw)
+- Found a bug? [Report a bug](https://github.com/nuwave/lighthouse/issues/new?template=bug_report.md)
+- Have an idea? [Propose a feature](https://github.com/nuwave/lighthouse/issues/new?template=feature_proposal.md)
+- Want to improve Lighthouse? [Read our contribution guidelines](https://github.com/nuwave/lighthouse/blob/master/CONTRIBUTING.md)
+
+## Changelog
+
+All notable changes to this project are documented in [`CHANGELOG.md`](CHANGELOG.md).
+
+## Upgrade Guide
+
+When upgrading between major versions of Lighthouse, consider [`UPGRADE.md`](UPGRADE.md).
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+We welcome contributions of any kind, see how in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Lighthouse,
+please email Benedikt Franke via [benedikt@franke.tech](mailto:benedikt@franke.tech).
 
-## License
+## Sponsors
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Lighthouse is supported by [its awesome sponsors](https://lighthouse-php.com/sponsors).
+
+If you want to support the development of Lighthouse and see your logo there, consider [sponsoring](https://github.com/sponsors/spawnia).
