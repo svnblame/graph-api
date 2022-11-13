@@ -1,0 +1,35 @@
+{
+  posts(first: 2, page: 2) {
+    data {
+      title
+      comments {
+        reply
+      }
+    }
+    paginatorInfo {
+      count
+      currentPage
+      lastPage
+    }
+  }
+}
+
+{
+  users(first: 2, page: 2) {
+    data {
+      name
+      email
+      posts {
+        title
+        comments {
+          reply
+        }
+      }
+    }
+    paginatorInfo {
+      count
+      currentPage
+      lastPage
+    }
+  }
+}
