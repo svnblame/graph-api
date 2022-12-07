@@ -11,11 +11,11 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['author_id', 'title', 'content'];
+    protected $guarded = [];
 
-    public function author(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'author_id');
+        return $this->belongsTo(User::class);
     }
 
     public function comments(): HasMany
