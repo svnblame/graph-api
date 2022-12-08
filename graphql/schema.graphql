@@ -131,5 +131,22 @@ type Mutation {
   createUser(name: String!, email: String!, password: String!): User! @create 
   updateUser(id: ID!, name: String, email: String): User @update 
   upsertUser(id: ID!, name: String!, email: String, password: String): User @upsert 
-  deleteUser(id: ID!): User @delete 
+  deleteUser(id: ID!): User @delete
+
+  createPost(
+    user_id: ID!
+    title: String! @rules(apply: ["required", "min:3"])
+    body: String! @rules(apply: ["required", "min:3"])
+  ): Post @create
+
+  updatePost(
+    id: ID!
+    title: String! @rules(apply: ["required", "min:3"])
+    body: String! @rules(apply: ["required", "min:3"])
+): Post @update
+
+  deletePost(
+    id: ID!
+): Post @delete
+
 }
