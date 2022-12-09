@@ -23,10 +23,14 @@ type Query {
 
     post(id: Int! @eq): Post @find
 
+    postResolver(id: ID!): Post  @field(resolver: "App\\GraphQL\\Queries\\PostResolver") # Not required. Just being explicit.
+
     posts(
       "Filters by title. Accepts SQL LIKE wildcards `%` and `_`."
       title: String @where(operator: "like")
     ): [Post!]! @paginate(defaultCount: 5) @orderBy(column: "created_at", direction: DESC)
+
+    postsResolver: [Post!]! @field(resolver: "App\\GraphQL\\Queries\\PostsResolver") # Not required. Just being explicit.
 }
 
 "Account of a person who utilizes this application."
@@ -138,6 +142,12 @@ type Mutation {
     title: String! @rules(apply: ["required", "min:3"])
     body: String! @rules(apply: ["required", "min:3"])
   ): Post @create
+
+    createPostResolver(
+    user_id: ID!
+    title: String! @rules(apply: ["required", "min:3"])
+    body: String! @rules(apply: ["required", "min:3"])
+  ): Post @field(resolver: "App\\GraphQL\\Mutations\\CreatePostResolver") # Not required. Just being explicit.
 
   updatePost(
     id: ID!
